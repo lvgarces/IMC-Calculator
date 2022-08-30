@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+
+    <title>Calculadora IMC</title>
+</head>
+
+<body>
+
+    <div class="container-fluid o-content">
+
+        <div class="o-card">
+            <header>
+                <h2>CALCULADOR IMC</h2>
+            </header>
+
+            <div class="info">
+                <ul class="nav nav-tabs o-tabs" id="pestana" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="calcular-tab" data-bs-toggle="tab"
+                            data-bs-target="#calcular" type="button" role="tab" aria-controls="home"
+                            aria-selected="true">Calcular IMC</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="static-tab" data-bs-toggle="tab" data-bs-target="#statics"
+                            type="button" role="tab" aria-controls="profile" aria-selected="false">Estadísticas</button>
+                    </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="calcular" role="tabpanel" aria-labelledby="calcular-tab">
+                        <div class="calcular-imc">
+                            <p class="o-p">Descubre tu indice de masa corporal</p>
+                            <form action="">
+                                <div class="mb-5 row">
+                                    <div class="col-sm-2">Sexo</div>
+                                    <div class="col o-genero">
+                                        <div class="row">
+                                            <div class="form-check col">
+                                                <input class="form-check-input" type="radio" name="genere" id="hombre"
+                                                    value="Hombre">
+                                                <label class="form-check-label" for="hombre">
+                                                    Hombre
+                                                </label>
+                                            </div>
+                                            <div class="form-check col">
+                                                <input class="form-check-input" type="radio" name="genere" id="mujer"
+                                                    value="Mujer">
+                                                <label class="form-check-label" for="mujer">
+                                                    Mujer
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mb-5 row">
+                                    <label for="edad" class="form-label col-sm-2">Edad</label>
+                                    <div class="col">
+                                        <input type="text" class="form-control" aria-label="age" aria-describedby="age"
+                                            id="age">
+                                    </div>
+                                </div>
+                                <div class="mb-5 row">
+                                    <label for="peso" class="form-label col-sm-2">Peso</label>
+                                    <div class="input-group col">
+                                        <input type="text" class="form-control" aria-label="peso"
+                                            aria-describedby="weigth" id="weigth">
+                                        <span class="input-group-text" id="weigth">Kg</span>
+                                    </div>
+                                </div>
+                                <div class="mb-5 row">
+                                    <label for="altura" class="form-label col-sm-2">Altura</label>
+                                    <div class="input-group col">
+                                        <input type="text" class="form-control" aria-label="altura"
+                                            aria-describedby="height" id="height">
+                                        <span class="input-group-text" id="height">M</span>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-primary" id="calcular-btn">Calcular</button>
+                            </form>
+                        </div>
+                        <div class="resultado-imc" id="imc">
+
+                            
+
+                        </div>
+
+
+                    </div>
+                    <div class="tab-pane fade" id="statics" role="tabpanel" aria-labelledby="statics-tab">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="./scripts/script.js" type="module"></script>
+</body>
+
+</html>
