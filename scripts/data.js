@@ -75,4 +75,9 @@ export const data =
         "edad": '55',
         "IMC" : "23.8"
     },
-]
+    ...Array.from({ length: 85 }, () => ({
+        "genero": Math.random() > 0.690982 ? 'Mujer' : 'Hombre',
+        "edad": (Math.floor(Math.random() * 62) + 18).toString(),
+        "IMC": (Math.random() * (40 - 15) + 15).toFixed(1)
+    }))
+];

@@ -20,9 +20,21 @@ obtenerCalculo();
 statics();
 
 function obtenerCalculo() {
-  let btn = document.getElementById("calcular-btn");
-  btn.addEventListener("click", calcularIMC);
-}
+    let btn = document.getElementById("calcular-btn");
+    btn.addEventListener("click", function (e) {
+      // Encuentra el formulario asociado
+      const form = e.target.closest("form");
+  
+      // Verifica la validez del formulario
+      if (form.checkValidity()) {
+        // Si el formulario es válido, llama a la función calcularIMC
+        calcularIMC();
+      } else {
+        // Si no es válido, muestra los mensajes de error
+        form.reportValidity();
+      }
+    });
+  }
 
 function calcularIMC() {
   peso = Number(document.getElementById("weigth").value);
@@ -261,16 +273,16 @@ function statics() {
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col">
+        <div class="row o-row-imc">
+            <div class="col prom">
                 <h5>Imc 18-25 (años)</h5>
                 <p>${promedio18}</p>
             </div>
-            <div class="col">
+            <div class="col o-border-prom prom">
                 <h5>Imc 26-39 (años)</h5>
                 <p>${promedio25}</p>
             </div>
-            <div class="col">
+            <div class="col prom">
                 <h5>Imc +40 (años)</h5>
                 <p>${promedio40}</p>
             </div>
