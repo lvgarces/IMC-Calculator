@@ -35,7 +35,7 @@ Use the following table to determine in which category your BMI falls:
 2. Open the `index.html` file in your browser to use the app.
 
 ```bash
-git clone <REPOSITORY_URL>
+git clone https://github.com/lvgarces/BMI-Calculator.git
 ```
 
 3. Fill in your weight and height to calculate your BMI.
